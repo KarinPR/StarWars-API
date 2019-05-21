@@ -1,0 +1,11 @@
+{
+  "name": "starwars-API",
+  "version": "1.0.0",
+  "description": "",
+  "main": "solarsystem.html",
+  "scripts": {
+    "live": "browserify script.js > bundle.js && live-server"
+  },
+  "author": "",
+  "license": "ISC"
+}

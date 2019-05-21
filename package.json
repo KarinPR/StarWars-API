@@ -4,10 +4,12 @@
   "description": "",
   "main": "solarsystem.html",
   "scripts": {
+    "start": "browserify script.js > bundle.js && live-server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "browserify": "^16.2.3"
+    "browserify": "^16.2.3",
+    "live-server": "^1.2.1"
   }
 }

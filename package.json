@@ -4,7 +4,7 @@
   "description": "",
   "main": "solarsystem.html",
   "scripts": {
-    "live": "browserify script.js > bundle.js && live-server"
+    "start": "browserify script.js > bundle.js && live-server"
   },
   "author": "",
   "license": "ISC"

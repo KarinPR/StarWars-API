@@ -2,7 +2,7 @@
   "name": "starwars-API",
   "version": "1.0.0",
   "description": "",
-  "main": "solarsystem.html",
+  "main": "index.html",
   "scripts": {
     "start": "browserify script.js > bundle.js && live-server"
   },

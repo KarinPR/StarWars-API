@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
-@font-face { font-family: Star Jedi Outline; src: url('Starjout.ttf'); }
+/*@font-face { font-family: Star Jedi Outline; src: url('Starjout.ttf'); }*/
 
 body {
     font: 14px/1.5 "Star Jedi Outline", sans-serif;
     background: #080e24 url(http://neography.com/experiment/circles/solarsystem/bg.jpg) repeat;
-    color: #E55A00;
+    /*color: #E55A00;*/
+    text-transform: lowercase;
 }
 
 h1{
     font-family: Star Jedi Outline, sans-serif;
     font-size: 5rem;
     text-align: center;
+    fill: black;
     color: #E55A00;
     text-shadow: 5px black;
     /*text-decoration-line: 1px white;*/
@@ -29,10 +31,14 @@ ul.solarsystem {
 }
 ul.solarsystem li {
     text-indent: -9999px;
+    width: 1.5vw;
     display: block;
     position: absolute;
     border: 2px solid #394057;
 /*    opacity: 0.7;*/
+}
+ul.solarsystem li:hover {
+    text-indent: 0px;
 }
 ul.solarsystem li span {
     display: block;
@@ -131,13 +137,14 @@ ul#descriptions h2 {
     -moz-transition: all 0.15s ease-in;
     -o-transition: all 0.15s ease-in;
     transition: all 0.15s ease-in;
-    font-size: 20px;
+    font-size: 2.5rem;
     position: relative;
     z-index: 101;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1);
+    margin-top: 10px;
 	margin-bottom: -15px;
 }
 ul#descriptions h2:hover {
@@ -151,11 +158,11 @@ ul#descriptions li p {
     position: absolute;
     left: -250px;
     top: 0;
-    width: 200px;
+    width: 20vw;
     display: inline;
     opacity: 0;
     visibility: hidden;
-    font-size: 13px;
+    font-size: 1.5rem;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -167,7 +174,7 @@ ul#descriptions li p {
     padding: 30px;
     color: #767892;
     line-height: 1.7;
-    z-index: 100;
+    z-index: 150;
     border: 1px solid #1c203c;
 }
 ul#descriptions h2:hover+p {
@@ -200,3 +207,54 @@ ul.solarsystem li.star {-webkit-animation-duration:5s; -moz-animation-duration:5
 @-moz-keyframes moon { from { -moz-transform:rotate(0deg) } to { -moz-transform:rotate(360deg) } }
 
 /* ul.solarsystem:hover li {-webkit-animation-play-state: paused;} */
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 10%;
+  height: 10vw;
+  background-color: rgba(0, 0 ,0, 0.1);
+  color: #fff;
+  text-align: center;
+  /*padding: 5px 0;*/
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 150;
+  bottom: 1%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltiptext {
+    
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0 ,0, 0.1) transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

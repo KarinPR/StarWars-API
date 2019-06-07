@@ -25,6 +25,7 @@ window.onload = function() {
 			const a = document.createElement('a');
 			a.setAttribute("href" , `#${planet.name}`);
 			const span = document.createElement('span');
+			// span.setAttribute("class", 'tooltiptext');
 			span.appendChild(document.createTextNode(`${planet.name}`));
 
 			const reduceSize = (num) => {
@@ -104,7 +105,7 @@ window.onload = function() {
 						return res.title 
 					})
 
-				))).toString()
+				))).toString().toLowerCase()
 
 				const information = {names : `${names}` , films : `${films}`}
 

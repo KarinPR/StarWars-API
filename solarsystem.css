@@ -6,6 +6,7 @@ body {
     background: #080e24 url(http://neography.com/experiment/circles/solarsystem/bg.jpg) repeat;
     /*color: #E55A00;*/
     text-transform: lowercase;
+    height: 100vh;
 }
 
 h1{
@@ -17,8 +18,12 @@ h1{
     text-shadow: 5px black;
     /*text-decoration-line: 1px white;*/
 }
-
 /* Solar System Styles */
+.main {
+    display: flex;
+    flex-flow: column;
+} 
+
 ul.solarsystem {
     position: relative;
     height: 640px;
@@ -126,9 +131,10 @@ ul.solarsystem li.star span {
 /*********Description***********/
 ul#descriptions {
     position: absolute;
-    top: 150px;
+    top: 250px;
     right: 100px;
     list-style: none;
+    height:100vh;
 }
 ul#descriptions h2 {
     cursor: pointer;
@@ -156,9 +162,9 @@ ul#descriptions h2:hover {
 }
 ul#descriptions li p {
     position: absolute;
-    left: -250px;
+    left: -950px;
     top: 0;
-    width: 20vw;
+    width: 30vw;
     display: inline;
     opacity: 0;
     visibility: hidden;
@@ -257,4 +263,17 @@ ul.solarsystem li.star {-webkit-animation-duration:5s; -moz-animation-duration:5
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+@media (max-width: 1000px) {
+    ul#descriptions {
+        position: relative;
+        top: 50px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    ul#descriptions h2:hover+p {
+        left: 150px;
+        width: 50vw;
+    }
 }

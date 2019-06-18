@@ -114,16 +114,16 @@ window.onload = function() {
 				liDes.appendChild(p);
 
 				const info = `
-					Name: ${planet.name}
-					Rotation Period: ${planet.rotation_period}
-					Orbital Period: ${planet.orbital_period}
-					Climate: ${planet.climate}
-					Gravity: ${planet.gravity}
-					Terrain: ${planet.terrain}
-					Surface Water: ${planet.surface_water}
-					Population: ${planet.population}
-					residents: ${information.names}
-					films: ${information.films}
+					Name: ${planet.name}, 
+					Rotation Period: ${planet.rotation_period},
+					Orbital Period: ${planet.orbital_period},
+					Climate: ${planet.climate},
+					Gravity: ${planet.gravity},
+					Terrain: ${planet.terrain},
+					Surface Water: ${planet.surface_water},
+					Population: ${planet.population},
+					residents: ${information.names},
+					films: ${information.films},
 				`
 				p.appendChild(document.createTextNode(`${info}`));
 
